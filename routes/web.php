@@ -17,18 +17,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home', [
         "title" => "Home"
     ]);
 });
 
 Route::get('/blog', function () {
-    return view('post');
+    return view('post', [
+        "title" => "Posts"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "name" => "Adisti Khairunnisa",
         "email" => "adistikhairunnisa@gmail.com",
         "image" => "adisti.png"
