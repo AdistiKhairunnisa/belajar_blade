@@ -24,10 +24,23 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', function () {
-    return view('post', [
-        "title" => "Posts"
+    $blog_posts = [
+        "title" => "Judul Postku pertama",
+        "author" => "Adis",
+        "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic quae fugit omnis illo ex veritatis facilis repellendus eveniet optio quaerat eligendi asperiores ratione natus perspiciatis obcaecati amet autem nam ullam, cum quis. Natus, voluptatem. Accusantium nesciunt molestiae quasi nostrum. Consequuntur labore est distinctio recusandae. Itaque quaerat, repellat vitae earum blanditiis expedita praesentium saepe facilis recusandae mollitia impedit dicta cumque corporis fugiat ex alias beatae aspernatur maxime nam facere nihil reiciendis reprehenderit quo? Quasi quaerat aut debitis esse. Sit, ut!"
+    ];
+    [
+        "title" => "Judul Postku kedua",
+        "author" => "Adis",
+        "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic quae fugit omnis illo ex veritatis facilis repellendus eveniet optio quaerat eligendi asperiores ratione natus perspiciatis obcaecati amet autem nam ullam, cum quis. Natus, voluptatem. Accusantium nesciunt molestiae quasi nostrum. Consequuntur labore est distinctio recusandae. Itaque quaerat, repellat vitae earum blanditiis expedita praesentium saepe facilis recusandae mollitia impedit dicta cumque corporis fugiat ex alias beatae aspernatur maxime nam facere nihil reiciendis reprehenderit quo? Quasi quaerat aut debitis esse. Sit, ut!"
+    ];
+
+    return view('posts', [
+        "title" => "Posts",
+        "posts" => $blog_posts
     ]);
 });
+
 
 Route::get('/about', function () {
     return view('about', [
