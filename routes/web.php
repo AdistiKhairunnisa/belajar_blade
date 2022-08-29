@@ -21,6 +21,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/blog', function () {
+    return view('post');
+});
+
 Route::get('/about', function () {
     return view('about', [
         "name" => "Adisti Khairunnisa",
